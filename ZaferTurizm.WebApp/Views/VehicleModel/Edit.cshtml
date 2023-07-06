@@ -1,0 +1,27 @@
+﻿@model VehicleModelDto
+<h1>Model Güncelleme Sayfası</h1>
+<div class="row">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <form method="post" asp-controller="VehicleModel" asp-action="Edit">
+            <input type="hidden" value="@Model.Id" />
+            <div class="form-group">
+                <label asp-for="Name">Model Adı</label>
+                <input class="form-control" asp-for="Name" />
+                @*@Html.TextBoxFor(m=>m.Name,new {@class="form-control"})*@
+            </div> @*asp-itemsa SelectListitem göndermen gerekiyor*@
+            <div class="form-group">
+                <label>Marka Adı</label>
+                <select class="form-select" asp-for=VehicleMakeId asp-items="ViewBag.VehicleMakeSelectList" ></select>
+                @*@Html.DropDownListFor(m=>m.VehicleMakeId,(SelectList)ViewBag.VehicleMakeList,new {@class="form-control w-100",@readonly="readonly"})*@
+                @*@Html.DropDownListFor(m=>m.Id,(SelectList)ViewBag.VehicleMakeList,new {@class="form-control"}) @*For yazınca modelden seçebiliyoruz modelden*@
+            </div>
+            <div class="mt-2">
+                <button type="submit" class="btn btn-warning float-end">
+                    Değişiklikleri Kaydet
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+</div>

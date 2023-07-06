@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RouteSummary>
+
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="float-end mb-2">
+            <a class="btn btn-outline-dark " asp-controller="Route" asp-action="Create">Yeni Rota Ekle</a>
+        </div>
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <td>Kalkış Noktası</td>
+                    <th>Varış Noktası</th> @*Tamamı Element <th ise etiket*@
+                    <th>Silme</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    //dynamic tipi ile kodlama yapma DUCK TYPING
+                    //Duck Typing tekniği ile View içerisinde kodlama yapmak biraz zor olabileceği için
+                    //sayfanın yukarısında model tanımlaması yapmak daha iyidir
+                    //** razor içinde yazdığımız kodlar client serverına gitmeyecek. tagler içinde geçerli
+                    <tr>
+                        <td>@item.DepartureName</td> @*Table division*@   @*Burada hmtl tagı kullandığımız için @ ile tekrar tanıt*@
+                        <td>@item.ArrivalName</td>
+                        <td><a asp-controller="Route" asp-action="Delete" asp-route-id="@item.Id">Sil</a></td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+}

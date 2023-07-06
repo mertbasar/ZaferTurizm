@@ -1,0 +1,74 @@
+﻿
+@model IEnumerable<VehicleMakeDto>
+
+<div class="row">
+    <div class="col-12">
+
+        <table class="table table-striped">
+            <thead>
+                <tr> 
+                    <th>Id</th>
+                    <th>Marka Adı</th> @*Tamamı Element <th ise etiket*@
+                    <th>Güncelleme</th>
+                    <th>Silme</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    //dynamic tipi ile kodlama yapma DUCK TYPING
+                    //Duck Typing tekniği ile View içerisinde kodlama yapmak biraz zor olabileceği için
+                    //sayfanın yukarısında model tanımlaması yapmak daha iyidir
+                    //** razor içinde yazdığımız kodlar client serverına gitmeyecek. tagler içinde geçerli
+                    <tr>
+                        <td>@item.Id</td> @*Table division*@   @*Burada hmtl tagı kullandığımız için @ ile tekrar tanıt*@
+                        <td>@item.Name</td>
+                        <td>
+                            <a class="btn btn-outline-secondary" asp-controller="VehicleMake" asp-action="Update" asp-route-id="@item.Id">Güncelle</a>
+                        </td>
+                        <td>
+                            @*<a class="btn btn-link" asp-controller="VehicleMake" asp-action="Delete" asp-route-id="@item.Id">Silme Mustaa</a>*@  @*Daha güzel yöntem*@
+                           
+                           <form>
+
+                           </form>
+                            
+                            <form method="post" asp-controller="VehicleMake" asp-action="Delete"> 
+                                <input type="hidden" name="Id" value="@item.Id" />
+                                <button class="btn btn-outline-dark">Sil</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="btn btn-danger float-end" href="/VehicleMake/Create">Yeni Marka Ekle</a>
+    </div>
+
+</div>
+@section Scripts
+
+{
+    <script>
+        //document. yazdıktan sonra eriştiğimiz Property, Metot ve diğer üyeler DOM frameworkünün birer üyesidir.
+        //DOM -> Document Object Model sayfanın belge modeli..
+        let formElements = document.getElementsByTagName('form');
+        for(let i=0; i < formElements.length;i++)
+        {
+            formElements[i].addEventListener('submit',function (eventArgs) {
+            
+             let confirmed = confirm("Dikkat!! Bu kayıt silinecek devam etmek istiyor musunuz?");
+             if(!confirmed){
+                 eventArgs.preventDefault();
+             }
+
+            
+            
+            }); //callback tekniği bir fonksiyona bir başka fonksiyon gönderme
+        }
+
+
+    </script>
+
+
+}

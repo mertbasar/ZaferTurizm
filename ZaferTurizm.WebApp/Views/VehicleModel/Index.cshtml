@@ -1,0 +1,153 @@
+﻿@model IEnumerable<VehicleModelSummary>
+
+<h1>Modeller</h1>
+
+<div class="row">
+    <div class="col-12">
+        <div class="text-end mb-2">
+            <a asp-controller="VehicleModel" asp-action="Create" class="btn btn-primary btn-sm">Yeni Ekle</a>
+        </div>
+        <table class="table table striped " id="myTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Model Adı</th>
+                    <th>Markası</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.VehicleMakeName</td>
+                        <td><div class="btn-group">
+                            @*Bu yola Tag Helpers denir.. daha yaygın*@
+                                @*<form method="post" asp-controller="VehicleModel" asp-action="Delete" class="d-inline">
+                                    <input type="hidden" name="Id" value="@item.Id" />
+                                    <button  class="btn btn-link">Sil</button>
+                                </form>*@
+                                    @*<button class="btn btn-primary delete-button" data-vehicle-model-id="@item.Id">Sil</button>*@
+                                <button class="btn btn-danger delete-button" data-vehicle-model-id="@item.Id">Sil</button>
+                            @*@Html.ActionLink("Sil","Delete","VehicleModel", new {id=item.Id}) --> Bu yol html helpers *@ 
+                            <a class="btn btn-warning d-inline-block ms-2" asp-controller="VehicleModel" asp-action="Edit" asp-route-id="@item.Id">Güncelle</a>
+
+                            
+                        </div>
+                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Scripts
+
+    {
+@*
+        <script>
+            let deleteButtonJQ = $.('.delete-buttons');
+            deleteButtonJQ.click(function (e)) {
+                e.preventDefault();
+                $.ajax({}),
+
+                this.
+            }
+
+
+        </script>*@
+
+
+
+    <script>
+        
+
+        //document. yazdıktan sonra eriştiğimiz Property, Metot ve diğer üyeler DOM frameworkünün birer üyesidir.
+        //DOM -> Document Object Model sayfanın belge modeli..
+        
+
+
+
+
+
+
+        let clickedButtons = document.getElementsByClassName('delete-button');
+        for(let i =0; i<clickedButtons.length;i++) {
+            var deleteButton = clickedButtons[i];
+            deleteButton.addEventListener('click', function(e){
+                e.preventDefault();
+                $.ajax({
+                    url: `/VehicleModel/Delete?id=${this.dataset.vehicleModelId}`,
+                    method: 'post',
+                    success: function (event) {
+                        let confirmed = confirm("Silinmisinmi");
+                        if(confirmed){
+                            alert(event);
+                            window.location.reload(); // sayfayı yeniden yüklememi sağlıyor..
+                        }
+                        else
+                        {
+                            event.preventDefault();
+                        }
+
+                    }
+                });
+            })
+        }
+        //let formElements = document.getElementsByTagName('form');
+        //for(let i=0; i < formElements.length;i++)
+        //{
+        //    formElements[i].addEventListener('submit',function (eventArgs) {
+            
+        //     let confirmed = confirm("Dikkat!! Bu kayıt silinecek devam etmek istiyor musunuz?");
+        //     if(!confirmed){
+        //         eventArgs.preventDefault();
+        //     }
+
+            
+            
+        //    }); //callback tekniği bir fonksiyona bir başka fonksiyon gönderme
+        //}
+        
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+
+
+
+
+
+
+
+            
+
+
+
+
+        
+        
+        
+        
+       
+        
+
+
+
+
+}
+
+
+
+
+
+
+
+
+

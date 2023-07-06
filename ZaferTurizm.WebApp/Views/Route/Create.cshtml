@@ -1,0 +1,33 @@
+﻿@model RouteDto
+
+<h1>Yeni Araç Modeli</h1>
+<div class="row">
+    <div class="col-12 col-sm-8 col-md-6">
+        <form method="post" asp-controller="Route" asp-action="Create">
+            <div class="form-group">
+                <div>
+                    <label class="form-label">Kalkış Şehri</label>
+                    <select asp-items="(SelectList)ViewBag.sehirler"asp-for="DepartuteId"  class="form-select w-100">
+                        <option value="">-- Seçiniz --</option>
+                    </select>
+                    @*@Html.TextBoxFor(m=>m.Name,new {@class="form-control"})*@
+                </div> @*asp-itemsa SelectListitem göndermen gerekiyor*@
+                <div>
+                    <label class="form-label">Varış Şehri</label>
+                    <select asp-items="(SelectList)ViewBag.sehirler" asp-for="ArrivalId"  class="form-select w-100">
+                        <option value="">-- Seçiniz --</option>
+                    </select>
+                    @*@Html.TextBoxFor(m=>m.Name,new {@class="form-control"})*@
+                </div> @*asp-itemsa SelectListitem göndermen gerekiyor*@
+                <div class="mt-2">
+                    <button id="create-button" type="submit" class="btn btn-success">
+                        Kaydet
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>
+

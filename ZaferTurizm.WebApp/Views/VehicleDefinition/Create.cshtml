@@ -1,0 +1,138 @@
+﻿@model VehicleDefinitionDto
+
+<h1>Yeni Araç Modeli</h1>
+<div class="row">
+    <div class="col-12 col-sm-8 col-md-6">
+        <form method ="post" asp-controller="VehicleDefinition" asp-action="Create">
+           <div class="form-group">
+                <div>
+                    <label class="form-label">Marka Adı</label>
+                    <select asp-items="(SelectList)ViewBag.MakeList" id="vehicle_makes" value="" class="form-select w-100">
+                        <option value="">-- Seçiniz --</option>
+                    </select>
+                    @*@Html.TextBoxFor(m=>m.Name,new {@class="form-control"})*@
+                </div> @*asp-itemsa SelectListitem göndermen gerekiyor*@
+                <div class="mt-2">
+                    <label class="form-label">Model Adı</label>
+                    <select class="form-select w-100" asp-for=VehicleModelId></select>
+                    @*@Html.DropDownListFor(m=>m.Id,(SelectList)ViewBag.VehicleMakeList,new {@class="form-control"}) @*For yazınca modelden seçebiliyoruz modelden*@
+                </div>
+                <div>
+                    <label class="form-label">Yıl</label>
+                    <input class="form-control w-100" asp-for="Year" />
+                    
+                </div>
+                <div>
+                    <label class="form-label">Yolcu Kapasitesi</label>
+                    <input class="form-control w-100" asp-for="SeatCount" />
+
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tuvalet</label>
+                    <input  type="checkbox" asp-for="HasToilet" class="form-check" />
+
+                </div>
+                <div class="form-group">
+                    <label class="form-label">WiFi</label>
+                    <input type="checkbox" asp-for="HasWifi" class="form-check" />
+                </div>
+
+                <div class="mt-2">
+                    <button id="create-button" type="submit" class="btn btn-success">
+                        Kaydet
+                    </button>
+                </div>
+
+           </div>
+        </form>
+    </div>
+
+</div>
+<!--
+    AJAX
+    Asynchronous Javascript And XML
+    Asynchronous Javascript And XML
+-->
+@section Scripts
+    {
+    <script>
+        //let vehicleMakesSelect=document.getElementById('vehicle_makes');
+
+        let vehicleMakesSelect = document.querySelector('#vehicle_makes');
+        vehicleMakesSelect.addEventListener('change', function () {
+
+            // Elementin kendisi ==>this
+
+            
+
+            $.ajax({
+                    url: `/VehicleModel/GetVehicleModelsById?vehicleMakeId=${this.value}`,
+                    method: 'get',
+                    success: function (vehicleModels) {
+                    
+                    var vehicleModelsSelect =document.querySelector('#VehicleModelId');
+                    vehicleModelsSelect.innerHTML=null;
+                    for(let vehicleModel of vehicleModels) {
+
+                        let optionElement = document.createElement('option');
+                        optionElement.value=vehicleModel.id;
+                        optionElement.innerText=vehicleModel.name;
+                        vehicleModelsSelect.appendChild(optionElement);
+
+                    }
+
+                }
+                
+
+            });
+        })
+    </script>
+    <script>
+        $(function() {
+            $('form').submit(function(event) {
+                event.preventDefault(); // Formun otomatik olarak submit olmasını engeller
+
+                // AJAX isteğini gönderme
+                $.ajax({
+                    url: $(this).attr('action'), // Formun action değerini kullanır
+                    type: $(this).attr('method'), // Formun method değerini kullanır
+                    data: $(this).serialize(), // Form verilerini serialize eder
+                    success: function(response) {
+                        // AJAX isteği başarılı olduğunda çalışacak kodlar
+                        // Mesajı alert olarak gösterme
+                        // İstenilen diğer işlemleri gerçekleştirme
+                        let confirmed = confirm(`${response.message}\n Yeni bir ekleme yapmak istiyor musunuz`);
+                        if(confirmed) 
+                        {
+
+                            window.location.href='/VehicleDefinition/Create'
+                        }
+                        else {
+                            window.location.href = '/VehicleDefinition/Index'
+                        }
+                        
+                    },
+                    error: function(error) {
+                        // AJAX isteği başarısız olduğunda çalışacak kodlar
+                    }
+                });
+            });
+        });
+    </script>
+    
+
+    
+       
+   
+
+    @*<script>
+
+        //Literal Objects
+        let player = {
+            firstName: 'Tsubasa',
+            lastName: 'Ozora',
+
+        }
+    </script>*@
+}
+

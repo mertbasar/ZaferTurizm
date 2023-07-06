@@ -1,0 +1,171 @@
+﻿@*@model TicketSummary
+
+<h1>@Model.PassengerFName  @Model.PassengerLName  Bilet Bilgileri</h1>
+
+<div class="row">
+    <div class="col-12">
+        <div class="text-end mb-2">
+            <button asp-controller="Passenger" asp-action="ExportToPDF" class="btn btn-success">Bileti Yazdır</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 border border-dark rounded-2">
+        <div class="row ">
+            <div class="col-4 pt-4 align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col-12">Sefer Tarihi : @Model.Date</div>
+                </div>
+                <div class="row border-top">
+                        <div class="col-6">Tc Kimlik Numarası : </div>
+                        <div class="col-6">@Model.PassengerIdentityNumber</div>
+                </div>
+                <div class="row border-top">
+                        <div class="col-6">Ad - Soyad</div>
+                        <div class="col-6">@Model.PassengerFName @Model.PassengerLName</div>
+                </div>
+                <div class="row border-top">
+                        <div class="col-6">Yolcu Yaşı</div>
+                        <div class="col-6">@Model.Age</div>
+                </div>
+                <div class="row border-top">
+                    
+                        <div class="col-6">İletişim Bilgileri</div>
+                        <div class="col-6">@Model.PhoneNumber</div>
+                    
+                </div>
+                <div class="row border-top">
+                    <div class="col-6">Koltuk Numarası :</div>
+                    <div class="col-6">@Model.SeatNumber</div>
+
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="/OtobusResimleri/Zafer-Partisi.png" class="img-fluid"/>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <h3>@Model.BusTripName</h3>
+                    <div class="h3">@Model.Route</div>
+                </div>
+                <div class="row pt-3 border-top text-center h4">
+                    <div class="col-6">Bilet Fiyatı :</div>
+                    <div class="col-6">@Model.PaidAmount</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+*@
+@*@model TicketSummary*@
+
+@*<h1>@Model.PassengerFName  @Model.PassengerLName  Bilet Bilgileri</h1>*@
+
+@*<form asp-controller="Passenger" asp-action="ExportToPDF" asp-route-id="@Model.Id" method="post">
+    <div class="row">
+        <div class="col-12">
+            <div class="text-end mb-2">
+                <a  asp-route="Passenger" asp-action="ExportToPdf" asp-route-id="@Model.Id" type="submit"  class="btn btn-success">Bileti Yazdır</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 border border-dark rounded-2">
+            <div class="row">
+                <div class="col-4 pt-4 align-items-center justify-content-center">
+                    <div class="row">
+                        <div class="col-12">Sefer Tarihi : @Model.Date</div>
+                    </div>
+                    <div class="row border-top">
+                        <div class="col-6">Tc Kimlik Numarası :</div>
+                        <div  class="col-6">@Model.PassengerIdentityNumber</div>
+                    </div>
+                    <div class="row border-top">
+                        <div class="col-6">Ad - Soyad</div>
+                        <div class="col-6">@Model.PassengerFName @Model.PassengerLName</div>
+                    </div>
+                    <div class="row border-top">
+                        <div class="col-6">Yolcu Yaşı</div>
+                        <div class="col-6">@Model.Age</div>
+                    </div>
+                    <div class="row border-top">
+                        <div class="col-6">İletişim Bilgileri</div>
+                        <div class="col-6">@Model.PhoneNumber</div>
+                    </div>
+                    <div class="row border-top">
+                        <div class="col-6">Koltuk Numarası :</div>
+                        <div class="col-6">@Model.SeatNumber</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="/OtobusResimleri/Zafer-Partisi.png" class="img-fluid" />
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <h3>@Model.BusTripName</h3>
+                        <div class="h3">@Model.Route</div>
+                    </div>
+                    <div class="row pt-3 border-top text-center h4">
+                        <div class="col-6">Bilet Fiyatı :</div>
+                        <div class="col-6">@Model.PaidAmount</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>*@
+@model TicketSummary
+
+<h1>@Model.PassengerFName  @Model.PassengerLName  Bilet Bilgileri</h1>
+
+<div class="row">
+    <div class="col-12">
+        <div class="text-end mb-2">
+            <a asp-controller="Passenger" asp-action="ExportToPDF" asp-route-id="@Model.Id" class="btn btn-success">Bileti Yazdır</a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 border border-dark rounded-2">
+        <div class="row ">
+            <div class="col-4 pt-4 align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col-12">Sefer Tarihi : @Model.Date</div>
+                </div>
+                <div class="row border-top">
+                    <div class="col-6">Tc Kimlik Numarası :</div>
+                    <div class="col-6">@Model.PassengerIdentityNumber</div>
+                </div>
+                <div class="row border-top">
+                    <div class="col-6">Ad - Soyad</div>
+                    <div class="col-6">@Model.PassengerFName @Model.PassengerLName</div>
+                </div>
+                <div class="row border-top">
+                    <div class="col-6">Yolcu Yaşı</div>
+                    <div class="col-6">@Model.Age</div>
+                </div>
+                <div class="row border-top">
+                    <div class="col-6">İletişim Bilgileri</div>
+                    <div class="col-6">@Model.PhoneNumber</div>
+                </div>
+                <div class="row border-top">
+                    <div class="col-6">Koltuk Numarası :</div>
+                    <div class="col-6">@Model.SeatNumber</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="/OtobusResimleri/Zafer-Partisi.png" class="img-fluid" />
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <h3>@Model.BusTripName</h3>
+                    <div class="h3">@Model.Route</div>
+                </div>
+                <div class="row pt-3 border-top text-center h4">
+                    <div class="col-6">Bilet Fiyatı :</div>
+                    <div class="col-6">@Model.PaidAmount</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

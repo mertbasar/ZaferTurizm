@@ -1,0 +1,130 @@
+﻿<div class="row">
+    <div class="col-3">
+        <div class="form-group d-flex justify-content-center align-items-center">
+            <div>
+                <label class="form-label">Rotalarımız</label>
+                <select asp-items="(SelectList)ViewBag.Dnm" value="" id="selectList" class="form-select w-100 routes">
+                    <option value="">-- Seçiniz --</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-9" id="cikko">
+    </div>
+</div>
+@section Scripts{
+    <script>
+        var i = document.querySelector("#selectList");
+        i.addEventListener('change', function () {
+            $.ajax({
+                url: `/Home/GetBusTripWithRoute?routeId=${this.value}`,
+                method: 'get',
+                success: function (event) {
+
+                    //for (var butn = 0; butn < event.length; butn++){
+                    //    console.log(event[butn]);
+                    //}
+                    
+
+                    var doldurma = document.getElementById('cikko');
+                    doldurma.innerHTML = null;
+
+                    var count = 0;
+                    for (let i = 0; i < event.length; i++) {
+                        var currentEvent = event[i];
+                        var abc = document.createElement("button");
+                        abc.id = `mybutton`;
+                        var firstSide = document.createElement("div");
+                        var secondSide = document.createElement("div");
+                        abc.classList.add("border");
+                        abc.classList.add("border-dark");
+                        abc.classList.add("rounded-3");
+                        abc.classList.add("mt-4");
+                        abc.classList.add("w-100");
+                        abc.classList.add("text-center");
+                        abc.classList.add("btn")
+                        abc.classList.add("btn-primary");
+                        firstSide.innerHTML = event[i].routeName + " / " + event[i].vehicleName + " <br/> " + event[i].date 
+                        doldurma.appendChild(abc)
+                        secondSide.classList.add("bg-primary");
+                        secondSide.classList.add("d-none");
+                        abc.appendChild(firstSide);
+                        abc.appendChild(secondSide);
+                        var koltuk = event[i].seatCount;
+                        var yolculuk = event[i].id;
+                        var sold = currentEvent.soldSeatNumbers;
+                       
+
+                        for (var j = 1; j < koltuk+1; j++ ) 
+                        {
+                           
+                            if(j%4==1) 
+                            {
+                            var brElement = document.createElement('br');
+                                secondSide.appendChild(brElement);
+
+                            }
+                            
+                            
+                             
+                            
+                            
+                            let seat = document.createElement('a');
+                            seat.classList.add("btn");
+                            if (sold != 0) 
+                            {
+                                for(var y =0; y<sold.length; y++ ) 
+                                {
+                                    if(sold[y]==j)
+                                    {
+                                        seat.classList.add("btn-danger");
+                                        
+                                        seat.addEventListener('click',function (a) {
+                                            a.preventDefault();
+                                            alert("Bu koltuk zaten alınmış")
+                                        });
+                                    }
+                                    else 
+                                    {
+                                        seat.classList.add("btn-success");
+                                        
+                                        seat.href = `/Home/PassengerAdd?busTripId=${yolculuk}&seatNumber=${j}`;
+                                    }
+
+                                }
+                            }
+                            else 
+                            {
+                                seat.classList.add("btn-success");
+                               
+                                seat.href = `/Home/PassengerAdd?busTripId=${yolculuk}&seatNumber=${j}`;
+                            }
+                            seat.innerText = [j];
+                            seat.classList.add("p-3");
+                            seat.classList.add("m-2");
+                            secondSide.appendChild(seat);
+                            
+                            
+                            
+                        }
+                    }
+
+                    var buttons = document.querySelectorAll("#cikko button");
+                    buttons.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            var secondSide = button.querySelector("div.bg-primary");
+                            if (secondSide.classList.contains("d-none")) {
+                                secondSide.classList.remove("d-none");
+                                secondSide.classList.add("d-block");
+                            } else {
+                                secondSide.classList.remove("d-block");
+                                secondSide.classList.add("d-none");
+                            }
+                        });
+                    });
+                }
+            });
+        });
+
+        </script>
+}

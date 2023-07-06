@@ -1,0 +1,45 @@
+﻿@model BusTripDto
+<h1>Yeni Araç Modeli</h1>
+<div class="row">
+    @if(ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">
+            @Html.Raw(ViewBag.ErrorMessage)
+        </div>
+    } 
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+        <form method="post" asp-controller="BusTrip" asp-action="Create">
+            <div>
+                <label asp-for="VehicleId">Araç Bilgisi</label>
+                <select class="form-select" asp-for="VehicleId" asp-items="ViewBag.arac">
+                    <option>--Seçiniz--</option>
+                </select>
+                @*@Html.TextBoxFor(m=>m.Name,new {@class="form-control"})*@
+            </div> @*asp-itemsa SelectListitem göndermen gerekiyor*@
+            <div class="mt-2">
+                <label>Marka Adı</label>
+                <select class="form-select" asp-for="RouteId" asp-items="ViewBag.route">
+                    <option>--Seçiniz--</option>
+                </select>
+                @*@Html.DropDownListFor(m=>m.Id,(SelectList)ViewBag.VehicleMakeList,new {@class="form-control"}) @*For yazınca modelden seçebiliyoruz modelden*@
+            </div>
+            <div>
+                <label>Sefer Tarihi</label>
+                <input type="datetime-local" asp-for="Date" class="form-control"/> @*Date time picker bak*@
+            </div>
+            <div>
+                <label>Price</label>
+                <input type="number" asp-for="Price" class="form-control" />
+                
+            </div>
+            <div class="mt-2">
+                <button type="submit" class="btn btn-success">
+                    Kaydet
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+

@@ -1,0 +1,100 @@
+﻿@model IEnumerable<VehicleSummary>
+<div class="row">
+    <div class="col-12">
+        <div>
+            <button class="btn btn-outline-warning float-end btn-sm bs-2">
+                <a asp-controller="Vehicle" asp-action="Create" class="btn text-primary"> Yeni Araç Ekle</a>
+            </button>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Fotoğraf</th>
+                    <th>Marka Adı</th> @*Tamamı Element <th ise etiket*@
+                    <th>Model Adı</th>
+                    <th>Araç Yılı</th>
+                    <th>Koltuk Sayısı</th>
+                    
+                    <th>Wifi</th>
+                    <th>Tuvalet</th>
+                    <th>Plaka</th>
+                    <th>Silme İşlemi</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    //dynamic tipi ile kodlama yapma DUCK TYPING
+                    //Duck Typing tekniği ile View içerisinde kodlama yapmak biraz zor olabileceği için
+                    //sayfanın yukarısında model tanımlaması yapmak daha iyidir
+                    //** razor içinde yazdığımız kodlar client serverına gitmeyecek. tagler içinde geçerli
+                    <tr>
+                        <td>@item.Id</td> @*Table division*@   @*Burada hmtl tagı kullandığımız için @ ile tekrar tanıt*@
+                        <td>
+                            <img id ="resim" src="@item.ImagesUrl" width="100" height="100" />
+                        </td>
+                        <td>@item.VehicleMakeName</td>
+                        <td>@item.VehicleModelName</td>
+                        <td>@item.VehicleYear</td>
+                        <td>@item.VehicleSeatCount</td>
+                        <td>@item.VehicleWifiStatus</td>
+                        <td>@item.VehicleToiletStatus</td>
+                        <td>@item.PlateNumber</td>
+                        <td>
+                            <button class="btn btn-outline-danger delete-button" data-vehicle-id="@item.Id">Sil</button>
+                        </td>
+                            
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @*<a class="btn btn-danger float-end" href="/VehicleMake/Create">Yeni Marka Ekle</a>*@
+    </div>
+</div>
+                        
+                        
+       
+
+@section Scripts
+
+    {
+    <script>
+        //document. yazdıktan sonra eriştiğimiz Property, Metot ve diğer üyeler DOM frameworkünün birer üyesidir.
+        //DOM -> Document Object Model sayfanın belge modeli..
+        let clickedButtons = document.getElementsByClassName('delete-button');
+        for (let i = 0; i < clickedButtons.length; i++) {
+            var deleteButton = clickedButtons[i];
+            deleteButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: `/Vehicle/Delete?id=${this.dataset.vehicleId}`,
+                    method: 'post',
+                    success: function (event) {
+                        let confirmed = confirm("Aracın Silinmek üzere devam etmek istiyor musunuz ? ");
+                        if (confirmed) {
+                            alert(event);
+                            window.location.reload(); // sayfayı yeniden yüklememi sağlıyor..
+                        }
+                        else {
+                            event.preventDefault();
+                        }
+
+                    }
+                });
+            })
+        }
+
+
+    </script>
+    <script>
+
+        
+
+
+
+    </script>
+
+}

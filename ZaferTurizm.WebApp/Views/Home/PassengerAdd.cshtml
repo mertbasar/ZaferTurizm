@@ -1,0 +1,100 @@
+﻿@model BusTripDto
+
+
+<div class="col-6 col-lg-7">
+
+    <form id="ticket_form">
+        <input type="hidden" name="BusTripId" value="@Model.Id"  />
+
+        <div class="mb-2">
+            <label class="form-label">Koltuk Numarası</label>
+            <input class="form-control" value="@ViewBag.SeatNumber" type="text" id="seat_number" name="SeatNumber" readonly />
+        </div>
+
+        <div class="mb-2">
+            <label class="form-label">Yolcu Adı</label>
+            <input class="form-control" name="PassengerFirstName" type="text" />
+        </div>
+
+        <div class="mb-2">
+            <label class="form-label">Yolcu Soyadı</label>
+            <input class="form-control" name="PassengerLastName" type="text" />
+        </div>
+
+        <div class="mb-2">
+            <label class="form-label">TC Kimlik</label>
+            <input class="form-control" name="PassengerIdentityNumber" type="text" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Yaş</label>
+            <input class="form-control" name="Age" type="number" />
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Telefon Numarası</label>
+            <input class="form-control" name="PhoneNumber" type="text" />
+        </div>
+
+        <div class="mb-2">
+            <label class="form-label">Ücret</label>
+            <input type="hidden" id="ticket_original_price" value="@Model.Price" />
+            <input class="form-control" type="number" name="Price" id="ticket_price" value="@Model.Price.ToString("N2").Replace(',','.')" readonly />
+            <label>
+                <input type="checkbox" id="is_student_ticket"  />
+                Öğrenci Bileti
+            </label>
+        </div>
+
+        <div class="text-end">
+            <button class="btn btn-dark">
+                Bileti Kaydet
+            </button>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <script>
+        $('#is_student_ticket').click(function () {
+
+            let ticketPrice = $('#ticket_price').val();
+
+            ticketPrice = parseFloat(ticketPrice)
+
+            let originalPrice = $('#ticket_original_price').val();
+            
+            originalPrice = parseFloat(originalPrice);
+
+            if (this.checked) {
+                ticketPrice = originalPrice * 0.75;
+            }
+            else {
+                ticketPrice = originalPrice;
+            }
+
+            $('#ticket_price').val(ticketPrice.toFixed(2));
+        })
+    </script>
+    <script>
+        $('#ticket_form').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url : '/Home/PassengerAdd',
+                method :'post',
+                data : $(this).serialize(),
+                success: function(commandResult) {
+                    alert(commandResult.message);
+                    window.location.href = '/Passenger/TicketList'
+                }
+            })
+
+
+
+
+
+
+        })
+
+
+
+
+    </script>
+}

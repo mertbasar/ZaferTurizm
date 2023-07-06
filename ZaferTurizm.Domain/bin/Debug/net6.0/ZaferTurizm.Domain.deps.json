@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ZaferTurizm.Domain/1.0.0": {
+        "dependencies": {
+          "ZaferTurizm": "1.0.0"
+        },
+        "runtime": {
+          "ZaferTurizm.Domain.dll": {}
+        }
+      },
+      "ZaferTurizm/1.0.0": {
+        "runtime": {
+          "ZaferTurizm.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ZaferTurizm.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ZaferTurizm/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

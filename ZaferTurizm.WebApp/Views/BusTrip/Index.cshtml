@@ -1,0 +1,86 @@
+﻿@model IEnumerable<BusTripInfo>
+<div class="row">
+    <div class="col-12">
+        <div>
+            <button class="btn btn-outline-warning float-end btn-sm mb-2">
+                <a asp-controller="BusTrip" asp-action="Create" class="btn text-primary "> Yeni Sefer Ekle</a>
+            </button>
+        </div>
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Rota</th>
+                    <th>Araç</th>
+                    <th>Tarih</th>
+                    <th>Fiyat</th>
+                    <th>Silme İslemi</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    //dynamic tipi ile kodlama yapma DUCK TYPING
+                    //Duck Typing tekniği ile View içerisinde kodlama yapmak biraz zor olabileceği için
+                    //sayfanın yukarısında model tanımlaması yapmak daha iyidir
+                    //** razor içinde yazdığımız kodlar client serverına gitmeyecek. tagler içinde geçerli
+                    <tr>
+                        <td>@item.Id</td> @*Table division*@   @*Burada hmtl tagı kullandığımız için @ ile tekrar tanıt*@
+                        <td>
+                            @item.RouteName
+                        </td>
+                        <td>@item.VehicleName</td>
+                        <td>@item.Date</td>
+                        <td>@item.Price</td>
+                        
+                        <td>
+                            <button class="btn btn-outline-danger delete-button" data-bustrip-id="@item.Id">Sil</button>
+                        </td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @*<a class="btn btn-danger float-end" href="/VehicleMake/Create">Yeni Marka Ekle</a>*@
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+
+    <script>
+        //document. yazdıktan sonra eriştiğimiz Property, Metot ve diğer üyeler DOM frameworkünün birer üyesidir.
+        //DOM -> Document Object Model sayfanın belge modeli..
+        let clickedButtons = document.getElementsByClassName('delete-button');
+        for (let i = 0; i < clickedButtons.length; i++) {
+            var deleteButton = clickedButtons[i];
+            deleteButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: `/BusTrip/Delete?id=${this.dataset.bustripId}`,
+                    method: 'post',
+                    success: function (event) {
+                        let confirmed = confirm("Sefer Silinmek üzere devam etmek istiyor musunuz ? ");
+                        if (confirmed) {
+                            alert(event);
+                            window.location.reload(); // sayfayı yeniden yüklememi sağlıyor..
+                        }
+                        else {
+                            event.preventDefault();
+                        }
+
+                    }
+                });
+            })
+        }
+
+
+    </script>
+}
+
+

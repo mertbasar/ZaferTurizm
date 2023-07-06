@@ -1,0 +1,313 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ZaferTurizm.WebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ZaferTurizm.WebApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\3702958e-6f9d-4d3b-bf47-675a34654995.png",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\3702958e-6f9d-4d3b-bf47-675a34654995.png"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\555b46f5-519d-4a02-879a-05b6ea4e187a.webp",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\555b46f5-519d-4a02-879a-05b6ea4e187a.webp"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\643a5f24-99b9-4d55-a037-bec7a8f7320f.jpg",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\643a5f24-99b9-4d55-a037-bec7a8f7320f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\Zafer-Partisi.png",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\Zafer-Partisi.png"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\a3d85081-ba81-42e7-92c1-6912df68ced9.jpg",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\a3d85081-ba81-42e7-92c1-6912df68ced9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\a76dfe64-a72a-41e0-85c1-fddeaaf9a2b5.jpg",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\a76dfe64-a72a-41e0-85c1-fddeaaf9a2b5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\a93ce6fe-cbbe-4e9c-9451-f4caa9e3b48e.png",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\a93ce6fe-cbbe-4e9c-9451-f4caa9e3b48e.png"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\barkod.jpg",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\barkod.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\d2e9f159-c7e1-43f6-a4d3-83e057fb5785.jpg",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\d2e9f159-c7e1-43f6-a4d3-83e057fb5785.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\dd4d06c9-f039-4488-ab5a-6208694e339a.png",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\dd4d06c9-f039-4488-ab5a-6208694e339a.png"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\e8700b88-ba0e-4ab9-9d6a-2a8b441cc8aa.png",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\e8700b88-ba0e-4ab9-9d6a-2a8b441cc8aa.png"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\OtobusResimleri\\fa08a57b-1643-465b-a453-fc00d3fd449f.jpeg",
+      "PackagePath": "staticwebassets\\OtobusResimleri\\fa08a57b-1643-465b-a453-fc00d3fd449f.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\mmert\\OneDrive\\Masaüstü\\Last\\ZaferTurizm\\ZaferTurizm.WebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ZaferTurizm.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ZaferTurizm.WebApp.props",
+      "PackagePath": "build\\ZaferTurizm.WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ZaferTurizm.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\ZaferTurizm.WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ZaferTurizm.WebApp.props",
+      "PackagePath": "buildTransitive\\ZaferTurizm.WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<VehicleInfo>
+
+<div class="row">
+    <div class="col-12">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Araç Plakası</th> @*Tamamı Element <th ise etiket*@
+                    <th>Marka - Model - Yıl </th>
+                    <th>Fotoğraf</th>
+                    <th>Detay Bilgiler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    //dynamic tipi ile kodlama yapma DUCK TYPING
+                    //Duck Typing tekniği ile View içerisinde kodlama yapmak biraz zor olabileceği için
+                    //sayfanın yukarısında model tanımlaması yapmak daha iyidir
+                    //** razor içinde yazdığımız kodlar client serverına gitmeyecek. tagler içinde geçerli
+                    <tr>
+                        @*Table division*@   @*Burada hmtl tagı kullandığımız için @ ile tekrar tanıt*@
+                        <td>@item.PlateNumber</td>
+                        <td>@item.VehicleDefinitionInfo</td>
+                        <td><img src="@item.ImagesUrl" width="50" height="50" /></td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Detaylar
+                            </button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">@item.PlateNumber</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h2>@item.VehicleDefinitionInfo</h2>
+                                            <h3>@item.VehicleMakeName </h3>
+                                            <h4>@item.Year</h4>
+                                            <div class="rounded">
+                                                    <img src="@item.ImagesUrl" width="50" height="50" />
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+                                            
+
+                                            
+
+        
+        
+        @*<a class="btn btn-danger float-end" href="/VehicleMake/Create">Yeni Marka Ekle</a>*@
+    </div>
+</div>
+                        
+                        
+
+
+
+
+
+

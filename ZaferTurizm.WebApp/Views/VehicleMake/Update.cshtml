@@ -1,0 +1,20 @@
+﻿@model VehicleMakeDto
+<div class="row">
+    <div class="col-12">
+        <h1>Marka Güncelleme</h1>
+    </div>
+</div>
+<div class="row">
+<div class="col-12 col-sm-8 col-md-6 col-lg-4">
+    @*Burada col-12 en düşük için çalışacak*@
+
+    <form method="post" action="/VehicleMake/Update">
+        @Html.HiddenFor(vm=>vm.Id)@*Bunu eklemeseydik yeni kayıt ekleme yapacaktı.****@
+        @*<input type="hidden" name="Id" value="@Model.Id" />*@
+        <label class="form-label">Marka Adı</label>
+        @Html.TextBoxFor(vm=>vm.Name, new{@class="form-control"})
+
+        <button class="btn btn-outline-primary float-end" type="submit">Markayı Güncelle</button>
+    </form>
+</div>
+</div>
